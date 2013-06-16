@@ -1,5 +1,5 @@
 /*!
- *	Link Awesome 0.1.0
+ *	Link Awesome 0.1.1
  *  
  * 	(c) 2013 Sebastian Teumert (<http://teumert.net>)
  * 	
@@ -111,9 +111,10 @@
 		.iconify("\f167");
 	}
 	
-	/* TODO: youtube play icon? */
-	
-	
+	a[href*="youtube.com/watch?"],
+	a[href*="youtu.be/watch?"] {
+		.iconify("\f16a");
+	}
 	
 	/* --- file types --- */
 	/* FA doesn't provide file type specific icons, but a more general approach */
