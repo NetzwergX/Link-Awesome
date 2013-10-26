@@ -1,10 +1,15 @@
 Link Awesome
 ============
 
-Link Awesome adds visual cues (icons) to your hyperlinks.
+Awesome visual cues (icons) for your hyperlinks.  
+Let your visitors see where you want to take them at the first glance!  
+Link-Awesome adds small icons to your external links, it supports all major social networking sites & video portals,
+as well as file type hinting for images, downloads and documents.
 
-Supports social links (twitter, facebook and so on) and file type detection
-(images, downloads, documents).
+Demo
+----
+
+[Link-Awesome Online Demo](http://teumert.net/Link_Awesome/)
 
 
 License
