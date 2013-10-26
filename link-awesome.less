@@ -1,131 +1,132 @@
-/*!
- *	Link Awesome 0.1.1
- *  
+/* 	
+ * 	Link Awesome 1.0
+ * 	teumert.net/Link-Awesome
+ * 
  * 	(c) 2013 Sebastian Teumert (<http://teumert.net>)
  * 	
- * 	Licensed under the MIT License:
- * 	http://github.com/NetzwergX/Link-Awesome/License.md
- *
+ * 	Licensed under the MIT License (see README.md)
  */
 
-@import "font-awesome/less/font-awesome.less";
+@import (reference) "font-awesome/less/variables.less";
 
 .iconify (@icon) {		
 	&:before {
-		&:extend([class^="icon-"] all);
-		content: "@{icon}\202F";
-		/*margin-right: .3em;*/ 
-		/* this sadly breaks underlines, so we use &nbsp; */	
+		font-family: FontAwesome;
+		-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: grayscale;
+		content: "@{icon}\202F";		
 	}
 }  
 
 .link-awesome {
-
-	/* --- social ---*/
+	// social
 	
-	a[href*="bitbucket.com"] {
-		.iconify("\f171");
+	a[href*="bitbucket.com"],
+	a[href*="bitbucket.org"] {
+		.iconify(@fa-var-bitbucket);
 	}	
 	
-	a[href*="dribble.com"] {
-		.iconify("\f17d");
+	a[href*="dribbble.com"] {
+		.iconify(@fa-var-dribbble);
 	}
 	
 	a[href*="dropbox.com"] { 	
-		.iconify("\f16b");
+		.iconify(@fa-var-dropbox);
 	}
 	
 	a[href*="facebook.com"] {
-		.iconify("\f09a");
+		.iconify(@fa-var-facebook);
 	}
 	
 	a[href*="flickr.com"] {
-		.iconify("\f16e");
+		.iconify(@fa-var-flickr);
 	}
 	
 	a[href*="foursquare.com"] {
-		.iconify("\f180");
+		.iconify(@fa-var-foursquare);
 	}
 	
 	a[href*="github.com"] {
-		.iconify("\f09b");
+		.iconify(@fa-var-github);
 	}
 	
 	a[href*="gittip.com"] {
-		.iconify("\f184");
+		.iconify(@fa-var-gittip);
 	}
 	
 	a[href*="plus.google."] {
-		.iconify("\f0D5");
+		.iconify(@fa-var-google-plus);
 	}
 	
 	a[href*="instagram.com"] {
-		.iconify("\f16d");
+		.iconify(@fa-var-instagram);
 	}
 	
 	a[href*="linkedin.com"] {
-		.iconify("\f0e1");
+		.iconify(@fa-var-linkedin);
 	}
 	
 	a[href*="pinterest.com"] {	
-		.iconify("\f0d2");
+		.iconify(@fa-var-pinterest);
 	}
 	
 	a[href*="renren.com"] {
-		.iconify("\f18b");
+		.iconify(@fa-var-renren);
 	}
 	
 	a[href*="skype.com"] {
-		.iconify("\f17e");
+		.iconify(@fa-var-skype);
 	}
 	
-	a[href*="stackexchange.com"],
-	a[href*="stackoverflow.com"],
+	a[href*="stackexchange.com"],	
 	a[href*="serverfault.com"],
 	a[href*="superuser.com"] {
-		.iconify("\f16c");
+		.iconify(@fa-var-stack-exchange);
+	}
+	
+	a[href*="stackoverflow.com"] {	
+		.iconify(@fa-var-stack-overflow);
 	}
 	
 	a[href*="trello.com"] {
-		.iconify("\f181");
+		.iconify(@fa-var-trello);
 	}
 	
 	a[href*="tumblr.com"] {
-		.iconify("\f173");
+		.iconify(@fa-var-tumblr);
 	}
 	
 	a[href*="twitter.com"] {
-		.iconify("\f099");
+		.iconify(@fa-var-twitter);
 	}
 	
 	a[href*="weibo.com"] {
-		.iconify("\f18a");
+		.iconify(@fa-var-weibo);
 	}
 	
 	a[href*="xing.com"] {
-		.iconify("\f168");
+		.iconify(@fa-var-xing);
 	}
 	
 	a[href*="youtube.com"],
 	a[href*="youtu.be"] {
-		.iconify("\f167");
+		.iconify(@fa-var-youtube);
 	}
 	
 	a[href*="youtube.com/watch?"],
 	a[href*="youtu.be/watch?"] {
-		.iconify("\f16a");
+		.iconify(@fa-var-youtube-play);
 	}
 	
-	/* --- file types --- */
-	/* FA doesn't provide file type specific icons, but a more general approach */
+	// file types	
 	
-	/* documents */
+	// documents
 	a[href$=".pdf"], 
 	a[href$=".doc"], a[href$=".docx"] {
-		.iconify("\f0f6"); /* icon-file-text-alt */
+		.iconify(@fa-var-file-text-o);
 	}
 	
-	/* images */
+	// images
 	
 	a[href$=".png"], a[href$=".apng"], a[href$=".PNG"], a[href$=".APNG"], 
 	a[href$=".gif"], a[href$=".GIF"],  
@@ -135,10 +136,10 @@
 	a[href$=".ico"], a[href$=".ICO"], 
 	a[href$=".tga"], a[href$=".TGA"], 
 	a[href$=".tiff"], a[href$=".TIFF"] {
-		.iconify("\f030"); /* icon-camera */
+		.iconify(@fa-var-camera); 
 	}
 	
-	/* downloads, e.g. archives */
+	// archives
 	
 	a[href$=".zip"], a[href$=".ZIP"], 
 	a[href$=".tar"], a[href$=".TAR"], 
@@ -148,18 +149,17 @@
 	a[href$=".so"], a[href$=".SO"], 
 	a[href$=".exe"], a[href$=".EXE"],
 	a[href^="ftp://"] {
-		.iconify("\f019"); /* icon-download-alt */
+		.iconify(@fa-var-download);
 	} 
 	
 	a[href$=".rss"], a[href$=".atom"] {
-		.iconify("\f09E"); /* icon-rss */
+		.iconify(@fa-var-rss); 
 	}
 	
 	a[href$=".xml"], a[href$=".xls"], a[href$=".xlsx"] {
-		.iconify("\f121");/* icon-code */
+		.iconify(@fa-var-code);
 	}
 	
-	/* 	sadly, we can not use icon stacks here, otherwise stacking 
-		icon-coffee on icon-file-alt would be great for .java files :D 
-	*/
+	// 	sadly, we can not use icon stacks here (can we?!), otherwise stacking 
+	//	icon-coffee on icon-file-alt would be great for .java files :D	
 }
